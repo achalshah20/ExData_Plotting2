@@ -1,4 +1,3 @@
-## This first line will likely take a few seconds. Be patient!
 if(!exists("NEI")){
   NEI <- readRDS("./data/summarySCC_PM25.rds")
 }
@@ -12,9 +11,6 @@ if(!exists("NEISCC")){
 
 library(ggplot2)
 
-# Across the United States, how have emissions from coal combustion-related sources changed from 1999-2008?
-
-# fetch all NEIxSCC records with Short.Name (SCC) Coal
 coalMatches  <- grepl("coal", NEISCC$Short.Name, ignore.case=TRUE)
 subsetNEISCC <- NEISCC[coalMatches, ]
 
